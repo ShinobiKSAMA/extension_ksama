@@ -1,10 +1,10 @@
 name: extension_ksama
 description: A package that provides commonly used extensions to speed up development.
-version: 0.0.1
-homepage: null
+version: 0.0.2
+homepage: https://github.com/ShinobiKSAMA/extension_ksama
 
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:

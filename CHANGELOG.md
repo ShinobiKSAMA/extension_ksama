@@ -1,4 +1,3 @@
-## 0.0.1
+## 1.0.0
 
-* This is an initial release of the extension_ksama.
-* Added basic extension on DateTime.
+* Initial Release

@@ -11,19 +11,6 @@ extension StringCases on String {
   /// ```
   bool get isBlanksOnly => trim().isEmpty;
 
-  /// Returns `true` if string matches Email format.
-  ///
-  /// ```dart
-  /// final str1 = "askme@ask.com";
-  /// final str2 = "xyz";
-  /// str1.isEmail;  // true
-  /// str2.isEmail;  // false
-  /// ```
-  bool get isEmail => RegExp(
-          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
-          caseSensitive: false)
-      .hasMatch(this);
-
   /// Returns `true` if string is Decimal number.
   /// Decimal String: only contains digits 0-9.
   /// ```dart

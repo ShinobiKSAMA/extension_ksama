@@ -1,39 +1,53 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Introduction
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## List of Extensions
 
-## Usage
+Currently we have following extensions getters, operators and methods.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+- **Extensions on DateTime:**
+    - DateTime get onlyDate
+    - DateTime get removeMicros
+    - DateTime get removeMillis
+    - DateTime get removeSeconds
+    - DateTime get removeMinutes
+    - DateTime get nextDay
+    - DateTime get prevDay
+    - DateTime get nextYear
+    - DateTime get prevYear
+    - bool get isToday
+    - bool get isTomorrow
+    - bool get isYesterday
+    - bool get isWeekend
+    - bool get isWeekday
+    <br />
+- **Extensions on String:**
+    - String get capitalisation
+    - String get titleCase
+    - String get pascalCase
+    - String get camelCase
+    - String get toggleCase
+    - String get reverse
+    - List<String> get tokenise
+    - String get abbreviate
+    - int? toInt({int? base})
+    - double? toDouble()
+    - bool? toBool()
+    - bool get isBlanksOnly
+    - bool get isEmail
+    - bool get isISBN
+    - bool get isIPv4
+    - bool get isIPv6
+    - bool get isDecimal
+    - bool get isBinary
+    - bool get isOctal
+    - bool get isHexadecimal
+    - bool get isDouble
+    - bool get isBool
+    <br />
+- **Extensions on BuildContext:**
+    - ThemeData get theme
+    - ColorScheme get colorScheme
+    - TextTheme get textTheme
+    <br />

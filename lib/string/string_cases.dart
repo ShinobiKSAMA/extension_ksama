@@ -23,6 +23,27 @@ extension StringCases on String {
   /// ```
   String get titleCase => split(" ").map((e) => e.capitalisation).join(" ");
 
+  /// Returns `String` as first letter of all words capitalized
+  /// without whitespaces.
+  ///
+  /// ```dart
+  /// final str = "Hello there people";
+  /// str.titleCase;  // Hello There People
+  /// ```
+  String get pascalCase => split(" ").map((e) => e.capitalisation).join();
+
+  /// Returns `String` as first letter of all words capitalized except
+  /// first word without whitespaces.
+  ///
+  /// ```dart
+  /// final str = "Hello there people";
+  /// str.titleCase;  // Hello There People
+  /// ```
+  String get camelCase => split(" ")
+      .map((e) => e.capitalisation)
+      .join()
+      .replaceFirst(characters.first, characters.first.toLowerCase());
+
   /// Returns `String` as case toggled for each characters.
   ///
   /// ```dart
