@@ -7,7 +7,7 @@ extension DateTimeOperations on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///      DateTime.parse('16-09-2023 20:18:04Z');
+  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
   /// checkDate.nextDay;          // 17-09-2023
   /// ```
   ///
@@ -18,7 +18,7 @@ extension DateTimeOperations on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///      DateTime.parse('16-09-2023 20:18:04Z');
+  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
   /// checkDate.prevDay;          // 15-09-2023
   /// ```
   ///
@@ -29,7 +29,7 @@ extension DateTimeOperations on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///      DateTime.parse('16-09-2023 20:18:04Z');
+  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
   /// checkDate.nextYear;         // 16-09-2024
   /// ```
   ///
@@ -40,7 +40,7 @@ extension DateTimeOperations on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///      DateTime.parse('16-09-2023 20:18:04Z');
+  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
   /// checkDate.prevYear;         // 16-09-2022
   /// ```
   ///

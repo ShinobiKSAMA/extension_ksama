@@ -39,7 +39,7 @@ extension DateTimeComparators on DateTime {
   ///
   /// The comparison is independent of whether the time is in UTC
   ///  or in the local time zone
-  bool operator <(DateTime otherDate) => isAfter(otherDate);
+  bool operator <(DateTime otherDate) => isBefore(otherDate);
 
   /// Returns `true` if left side is before Right side or on same date.
   ///
@@ -53,5 +53,5 @@ extension DateTimeComparators on DateTime {
   /// The comparison is independent of whether the time is in UTC
   ///  or in the local time zone
   bool operator <=(DateTime otherDate) =>
-      isAfter(otherDate) || isAtSameMomentAs(otherDate);
+      isBefore(otherDate) || isAtSameMomentAs(otherDate);
 }

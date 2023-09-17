@@ -49,8 +49,8 @@ extension DateTimeCheckers on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///    DateTime.parse('16-09-2023 20:18:04Z'); //Saturday
-  /// checkDate.isWeekend;                       //true
+  ///    DateTime.parse('2023-09-16 20:18:00.123456789z'); //Saturday
+  /// checkDate.isWeekend;                                 //true
   /// ```
   bool get isWeekend {
     return [6, 7].contains(weekday);
@@ -60,8 +60,8 @@ extension DateTimeCheckers on DateTime {
   ///
   /// ```dart
   /// final checkDate =
-  ///    DateTime.parse('12-09-2023 20:18:04Z'); //Tuesday
-  /// checkDate.isWeekday;                       //true
+  ///    DateTime.parse('2023-09-12 20:18:00.123456789z'); //Tuesday
+  /// checkDate.isWeekday;                                 //true
   /// ```
   bool get isWeekday {
     return ![6, 7].contains(weekday);

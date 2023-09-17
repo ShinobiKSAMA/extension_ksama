@@ -1,27 +1,7 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:extension_ksama/date_time/date_time.dart';
+part of date_time_tests;
 
-void main() {
-  group("Tests remove and onlyDate getters", () {
-    test('onlyDate test', () {
-      final dateOnly = DateTime.now().onlyDate;
-      expect(dateOnly.hour, 0);
-      expect(dateOnly.minute, 0);
-      expect(dateOnly.second, 0);
-      expect(dateOnly.millisecond, 0);
-      expect(dateOnly.microsecond, 0);
-    });
-
-    test('remove test', () {
-      final testDate = DateTime.now();
-      expect(testDate.removeMicros.microsecond, 0);
-      expect(testDate.removeMillis.millisecond, 0);
-      expect(testDate.removeSeconds.second, 0);
-      expect(testDate.removeMinutes.minute, 0);
-    });
-  });
-
-  group("Tests is(s) getters", () {
+void dateTimeCheckers() {
+  group("DateTime Checkers Tests", () {
     test('isToday test', () {
       final testDate = DateTime.now();
       expect(testDate.isToday, true);
@@ -44,6 +24,16 @@ void main() {
       expect(testDate.prevDay.isYesterday, true);
       expect(testDate.nextYear.isYesterday, false);
       expect(DateTime(4500).isYesterday, false);
+    });
+
+    test('isWeekday test', () {
+      expect(DateTime.parse('2023-09-16 20:18:00.123456789z').isWeekday, false);
+      expect(DateTime.parse('2023-09-12 20:18:00.123456789z').isWeekday, true);
+    });
+
+    test('isWeekend test', () {
+      expect(DateTime.parse('2023-09-16 20:18:00.123456789z').isWeekend, true);
+      expect(DateTime.parse('2023-09-12 20:18:00.123456789z').isWeekend, false);
     });
   });
 }
