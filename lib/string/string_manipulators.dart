@@ -25,6 +25,7 @@ extension StringManipulators on String {
   /// ```dart
   /// "Laughing out loud".abbreviate; //LOL
   /// ```
-  String get abbreviate =>
-      trim().split(" ").map((e) => e.characters.first.toUpperCase()).join();
+  String get abbreviate => !isBlanksOnly
+      ? trim().split(" ").map((e) => e.characters.first.toUpperCase()).join()
+      : "";
 }

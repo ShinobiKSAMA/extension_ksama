@@ -12,7 +12,7 @@ extension StringValidators on String {
   /// str2.isEmail;  // false
   /// ```
   bool get isEmail => RegExp(
-          r"^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$",
+          r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$",
           caseSensitive: false)
       .hasMatch(this);
 
@@ -25,7 +25,7 @@ extension StringValidators on String {
   /// str2.isISBN;  // false
   /// ```
   bool get isISBN =>
-      RegExp(r"/^(?=(?:[^0-9]*[0-9]){10}(?:(?:[^0-9]*[0-9]){3})?$)[\d-]+$/",
+      RegExp(r"^(ISBN(\-1[03])?[:]?[ ]?)?(([0-9][- ]?){13}|([0-9][- ]?){10})$",
               caseSensitive: false)
           .hasMatch(this);
 
@@ -37,8 +37,7 @@ extension StringValidators on String {
   /// str1.isIPv4;  // true
   /// str2.isIPv4;  // false
   /// ```
-  bool get isIPv4 => RegExp(
-          r"/(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/",
+  bool get isIPv4 => RegExp(r"^(?:(?:^|\.)(?:2(?:5[0-5]|[0-4]\d)|1?\d?\d)){4}$",
           caseSensitive: false)
       .hasMatch(this);
 
@@ -50,7 +49,8 @@ extension StringValidators on String {
   /// str1.isIPv6;  // true
   /// str2.isIPv6;  // false
   /// ```
-  bool get isIPv6 => RegExp(r"/((([0-9a-fA-F]){1,4})\:){7}([0-9a-fA-F]){1,4}/",
+  bool get isIPv6 => RegExp(
+          r"^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}:([0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){4}:([0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){3}:([0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){2}:([0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(([0-9A-Fa-f]{1,4}:){0,5}:((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|(::([0-9A-Fa-f]{1,4}:){0,5}((\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b)\.){3}(\b((25[0-5])|(1\d{2})|(2[0-4]\d)|(\d{1,2}))\b))|([0-9A-Fa-f]{1,4}::([0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})|(::([0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){1,7}:))$",
           caseSensitive: false)
       .hasMatch(this);
 
@@ -62,8 +62,8 @@ extension StringValidators on String {
   /// str1.isIPv6;  // true
   /// str2.isIPv6;  // false
   /// ```
-  bool get isPhone =>
-      RegExp(r"^[+]{1}(?:[0-9\\-\\(\\)\\/\\.]\\s?){6, 15}[0-9]{1}$",
-              caseSensitive: false)
-          .hasMatch(this);
+  bool get isPhone => RegExp(
+          r"^(0|\+|(\+[0-9]{2,4}|\(\+?[0-9]{2,4}\)) ?)([0-9]*|\d{2,4}-\d{2,4}(-\d{2,4})?)$",
+          caseSensitive: false)
+      .hasMatch(this);
 }

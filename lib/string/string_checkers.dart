@@ -2,7 +2,7 @@ part of string_extensions;
 
 // Author: Aditya Mhatre (ShinobiKSAMA)
 
-extension StringCases on String {
+extension StringCheckers on String {
   /// Returns `true` if only whitespaces are present.
   ///
   /// ```dart

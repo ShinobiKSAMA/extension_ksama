@@ -30,7 +30,8 @@ extension StringCases on String {
   /// final str = "Hello there people";
   /// str.titleCase;  // Hello There People
   /// ```
-  String get pascalCase => split(" ").map((e) => e.capitalisation).join();
+  String get pascalCase =>
+      trim().split(" ").map((e) => e.capitalisation).join();
 
   /// Returns `String` as first letter of all words capitalized except
   /// first word without whitespaces.
@@ -39,10 +40,8 @@ extension StringCases on String {
   /// final str = "Hello there people";
   /// str.titleCase;  // Hello There People
   /// ```
-  String get camelCase => split(" ")
-      .map((e) => e.capitalisation)
-      .join()
-      .replaceFirst(characters.first, characters.first.toLowerCase());
+  String get camelCase =>
+      trim().characters.first.toLowerCase() + pascalCase.substring(1);
 
   /// Returns `String` as case toggled for each characters.
   ///
