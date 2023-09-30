@@ -1,17 +1,13 @@
 # extension_ksama
 
+![Logo](images/examples.png)
+
 Collection of must have extensions on DateTime, String, BuildContext and many more.
 
 <p align="center">
   <a href="#getting-started">Getting Started</a> •
   <a href="#list-of-extensions">Extensions</a>
 </p>
-
-<ul>
-  <a href="#extensions-on-datetime">DateTime</a><br/>
-  <a href="#extensions-on-string">String</a><br/>
-  <a href="#extensions-on-buildcontext">BuildContext</a><br/>
-</ul>
 
 ## Getting started
 
@@ -22,6 +18,12 @@ import 'package:extension/_ksamaextension_ksama.dart';
 ``` 
 
 ## List of Extensions
+
+<ul>
+  <a href="#extensions-on-datetime">DateTime</a><br/>
+  <a href="#extensions-on-string">String</a><br/>
+  <a href="#extensions-on-buildcontext">BuildContext</a><br/>
+</ul>
 
 Currently we have following extensions getters, operators and methods.
 
