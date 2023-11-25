@@ -2,7 +2,7 @@ part of date_time_extensions;
 
 // Author: Aditya Mhatre (ShinobiKSAMA)
 
-extension DateTimeOperations on DateTime {
+extension DayOperations on DateTime {
   /// Returns `DateTime` object of Next day.
   ///
   /// ```dart
@@ -12,7 +12,7 @@ extension DateTimeOperations on DateTime {
   /// ```
   ///
   /// This will not consider time Parameters.
-  DateTime get nextDay => add(const Duration(days: 1)).onlyDate;
+  DateTime get nextDay => superAdd(days: 1);
 
   /// Returns `DateTime` object of Previous day.
   ///
@@ -23,29 +23,7 @@ extension DateTimeOperations on DateTime {
   /// ```
   ///
   /// This will not consider time Parameters.
-  DateTime get prevDay => subtract(const Duration(days: 1)).onlyDate;
-
-  /// Returns `DateTime` object of Next year.
-  ///
-  /// ```dart
-  /// final checkDate =
-  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
-  /// checkDate.nextYear;         // 16-09-2024
-  /// ```
-  ///
-  /// This will not consider time Parameters.
-  DateTime get nextYear => DateTime(year + 1, month, day);
-
-  /// Returns `DateTime` object of Previous year.
-  ///
-  /// ```dart
-  /// final checkDate =
-  ///      DateTime.parse('2023-09-16 20:18:00.123456789z');
-  /// checkDate.prevYear;         // 16-09-2022
-  /// ```
-  ///
-  /// This will not consider time Parameters.
-  DateTime get prevYear => DateTime(year - 1, month, day);
+  DateTime get prevDay => superSubtract(days: 1);
 }
 
 /// Returns `DateTime` object of Tomorrows's date.
