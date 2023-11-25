@@ -1,6 +1,6 @@
 name: extension_ksama
 description: A package that provides commonly used extensions to speed up development.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ShinobiKSAMA/extension_ksama
 
 environment:
