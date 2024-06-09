@@ -16,10 +16,10 @@ extension ArithmeticOperations on DateTime {
   ///
   /// This will not consider time Parameters.
   DateTime superAdd({
-    int days = 0,
-    int weeks = 0,
-    int months = 0,
-    int years = 0,
+    int days = 0, //Number of Days to be added, default is 0
+    int weeks = 0, //Number of Weeks to be added, default is 0
+    int months = 0, //Number of Months to be added, default is 0
+    int years = 0, //Number of Years to be added, default is 0
   }) {
     DateTime newDate = add(Duration(days: days + (weeks * 7)));
     newDate = DateTime(newDate.year + years, month + months, day);
@@ -39,10 +39,10 @@ extension ArithmeticOperations on DateTime {
   ///
   /// This will not consider time Parameters.
   DateTime superSubtract({
-    int days = 0,
-    int weeks = 0,
-    int months = 0,
-    int years = 0,
+    int days = 0, //Number of Days to be subtracted, default is 0
+    int weeks = 0, //Number of Weeks to be subtracted, default is 0
+    int months = 0, //Number of Months to be subtracted, default is 0
+    int years = 0, //Number of Years to be subtracted, default is 0
   }) {
     DateTime newDate = subtract(Duration(days: days + (weeks * 7)));
     newDate = DateTime(newDate.year - years, month - months, day);
